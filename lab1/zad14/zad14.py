@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 # wczytaj obraz
-im = Image.open("lew.png").convert("L")  # konwertuj do 8-bit gray
+im = Image.open("lwy.png").convert("L")  # konwertuj do 8-bit gray
 arr = np.array(im)
 
 M = np.array([[7,1,5],
