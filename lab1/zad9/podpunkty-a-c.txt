@@ -1,3 +1,7 @@
-Skalowanie: Image → Scale… -> Rozmiar: Width: 500, Height: 650.
+Skalowanie: 
+Image → Scale… ->
+Rozmiar: Width: 500, Height: 650
 
-Interpolacja: None (czyli nearest neighbor dla podpunktu A lub Bilinear dla popdunktu C)
+Interpolacja: 
+- None (czyli nearest neighbor) dla podpunktu A 
+- lub Bilinear dla popdunktu C
