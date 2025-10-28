@@ -1,0 +1,15 @@
+1. Bayer działa nadal na tej samej zasadzie co w zadaniu 14 dithering zmiennego progu tylko ze na macierzy 4x4 
+jest to specyficzny przypadek bo działamy na domyślnej macierzy stworzonej przez Bayera 
+
+
+2. Wczytuje obraz i zamienia go na odcienie szarości (0–255).
+Dzieli jasność na 5 przedziałów — każdy to inny poziom szarości.
+Czyli np.
+0–51 → 0
+52–102 → 64
+103–153 → 128
+154–204 → 192
+205–255 → 255
+Dla każdego piksela program sprawdza, w którym miejscu kafelka 4×4 on leży (czyli który próg Bayera ma zastosować).
+Macierz Bayera ustala, czy ten piksel ma zostać lekko „podniesiony” do wyższego poziomu — dzięki temu obraz nie jest jednolity, tylko ma delikatny wzór, który imituje więcej tonów.
+Na końcu piksele zamieniane są na najbliższe wartości z palety {0,64,128,192,255} i zapisywany jest nowy obraz.

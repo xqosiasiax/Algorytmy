@@ -1,0 +1,6 @@
+1. 
+
+To obliczenie lokalnego progu (threshold) dla każdego elementu macierzy ditheringu 
+M określa kolejność, w jakiej piksele mają się rozjaśniać, a ten wzór przelicza ją na wartość progu w skali 0–255.
+
+Piksel staje sie biały gdy jego jasnosc jest wieksza od progu T

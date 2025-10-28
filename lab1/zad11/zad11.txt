@@ -1,0 +1,26 @@
+Zastosowano dwa klasyczne algorytmy dyfuzji błędów:
+1.Floyd–Steinberg
+2.Jarvis–Judice–Ninke (JJN)
+
+
+1. Algorytm Floyd–Steinberg
+W programie wykonano dwa przypadki:
+próg T = 128 – klasyczny próg, który dzieli jasności na pół (średnia szarość),
+próg T = 109 – niższy próg, który powoduje, że więcej pikseli zostanie uznanych za „białe” (jaśniejsze fragmenty obrazu stają się bardziej widoczne, ogólny obraz jaśniejszy).
+Efekt zmiany progu:
+Niższy próg 
+T=109 powoduje rozjaśnienie obrazu – obszary średnio-szare są traktowane jako jasne, więc więcej pikseli przyjmuje wartość 255 (biała)
+
+2. Algorytm Jarvis–Judice–Ninke (JJN)
+W kodzie użyto dwóch trybów:
+tryb 1-bitowy (czarno-biały) z progiem T=109
+tryb 5-poziomowy z wartościami palety {0, 64, 128, 192, 255}, dzięki funkcji quantize_from_diagram
+
+Obraz 1-bitowy ma większy kontrast i wyraźniejsze, bardziej „pikselowe” przejścia.
+Obraz 5-poziomowy jest znacznie bardziej gładki, zawiera więcej odcieni szarości i przypomina oryginał – lepiej odwzorowuje światłocień i fakturę.
+
+
+
+Krótkie wyjasnienie obu algorytmów:
+Algorytm Floyd–Steinberga zamienia obraz w czarno-biały, rozpraszając błąd jasności każdego piksela na jego sąsiadów. Dzięki temu obraz wygląda, jakby miał więcej odcieni szarości, mimo że zawiera tylko czerń i biel.
+Algorytm Jarvis–Judice–Ninke działa podobnie, ale rozprowadza błąd na większy obszar obrazu, co daje gładsze i bardziej naturalne przejścia między tonami, mniej „pikselowy” efekt.
