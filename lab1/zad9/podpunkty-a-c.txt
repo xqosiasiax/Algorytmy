@@ -32,7 +32,7 @@ Każdy nowy piksel jest obliczany jako średnia ważona czterech najbliższych p
 | Styl      | Pixel-art, gra retro    | Naturalne zdjęcie          |
 
 
-🔹 (b) “Uśredniony Nearest Neighbor”
+(b) “Uśredniony Nearest Neighbor”
 
 czyli ta rozszerzona wersja klasycznego najbliższego sąsiada
 
@@ -48,7 +48,7 @@ Kolory lekko się uśredniają, więc gdzieniegdzie widać delikatne przejścia,
 
 Nadal pixel-artowy klimat, tylko mniej agresywny.
 
-🔹 (d) “Interpolacja – średnia z najwyższej i najniższej jasności 4 sąsiadów”
+(d) “Interpolacja – średnia z najwyższej i najniższej jasności 4 sąsiadów”
 
 Jak działa:
 Zamiast klasycznej interpolacji (średniej z czterech pikseli), bierze najciemniejszy i najjaśniejszy z tych czterech, a potem liczy średnią między nimi.
