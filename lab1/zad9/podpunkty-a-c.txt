@@ -5,3 +5,29 @@ Rozmiar: Width: 500, Height: 650
 Interpolacja: 
 - None (czyli nearest neighbor) dla podpunktu A 
 - lub Bilinear dla popdunktu C
+
+---
+
+### (a) Nearest Neighbor (Interpolacja = None)
+
+**Jak działa:**
+Każdy piksel w powiększonym obrazie kopiuje kolor **najbliższego piksela oryginalnego** – bez żadnego mieszania kolorów.
+
+---
+
+### (c) Bilinear Interpolation (Interpolacja = Bilinear)
+
+**Jak działa:**
+Każdy nowy piksel jest obliczany jako **średnia ważona czterech najbliższych pikseli** oryginału — więc wartości pośrednie są „wygładzane”.
+
+---
+
+### „na oko”:
+
+| Cecha     | Nearest Neighbor (a)    | Bilinear (b)               |
+| --------- | ----------------------- | -------------------------- |
+| Krawędzie | Poszarpane, kwadratowe  | Wygładzone                 |
+| Piksele   | Widoczne, ostre         | Zlane ze sobą              |
+| Kolory    | Identyczne z oryginałem | Lekko rozmyte / uśrednione |
+| Styl      | Pixel-art, gra retro    | Naturalne zdjęcie          |
+
