@@ -10,15 +10,15 @@ Interpolacja:
 
 ### (a) Nearest Neighbor (Interpolacja = None)
 
-**Jak działa:**
-Każdy piksel w powiększonym obrazie kopiuje kolor **najbliższego piksela oryginalnego** – bez żadnego mieszania kolorów.
+Jak działa:
+Każdy piksel w powiększonym obrazie kopiuje kolor najbliższego piksela oryginalnego – bez żadnego mieszania kolorów.
 
 ---
 
 ### (c) Bilinear Interpolation (Interpolacja = Bilinear)
 
-**Jak działa:**
-Każdy nowy piksel jest obliczany jako **średnia ważona czterech najbliższych pikseli** oryginału — więc wartości pośrednie są „wygładzane”.
+Jak działa:
+Każdy nowy piksel jest obliczany jako średnia ważona czterech najbliższych pikseli oryginału — więc wartości pośrednie są „wygładzane”.
 
 ---
 
