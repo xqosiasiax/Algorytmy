@@ -1,4 +1,4 @@
-1. 
+1.  Dithering to technika, która rozkłada piksele o różnych jasnościach w taki sposób, by z daleka wyglądały jak płynne przejścia między kolorami.
 
 To obliczenie lokalnego progu (threshold) dla każdego elementu macierzy ditheringu 
 M określa kolejność, w jakiej piksele mają się rozjaśniać, a ten wzór przelicza ją na wartość progu w skali 0–255.
