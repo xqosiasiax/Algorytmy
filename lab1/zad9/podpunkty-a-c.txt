@@ -24,10 +24,40 @@ Każdy nowy piksel jest obliczany jako **średnia ważona czterech najbliższych
 
 ### „na oko”:
 
-| Cecha     | Nearest Neighbor (a)    | Bilinear (b)               |
+| Cecha     | Nearest Neighbor (a)    | Bilinear (c)               |
 | --------- | ----------------------- | -------------------------- |
 | Krawędzie | Poszarpane, kwadratowe  | Wygładzone                 |
 | Piksele   | Widoczne, ostre         | Zlane ze sobą              |
 | Kolory    | Identyczne z oryginałem | Lekko rozmyte / uśrednione |
 | Styl      | Pixel-art, gra retro    | Naturalne zdjęcie          |
 
+
+🔹 (b) “Uśredniony Nearest Neighbor”
+
+czyli ta rozszerzona wersja klasycznego najbliższego sąsiada
+
+Jak działa:
+Nie bierze tylko jednego najbliższego piksela, ale dwa najbliższe i robi z nich średnią.
+To taka wersja „trochę łagodniejszy nearest neighbor” — coś między pixel-artem a bilinearem.
+
+Jak wygląda:
+
+Krawędzie wciąż są ostre, ale minimalnie mniej poszarpane.
+
+Kolory lekko się uśredniają, więc gdzieniegdzie widać delikatne przejścia, ale nadal nie ma rozmycia.
+
+Nadal pixel-artowy klimat, tylko mniej agresywny.
+
+🔹 (d) “Interpolacja – średnia z najwyższej i najniższej jasności 4 sąsiadów”
+
+Jak działa:
+Zamiast klasycznej interpolacji (średniej z czterech pikseli), bierze najciemniejszy i najjaśniejszy z tych czterech, a potem liczy średnią między nimi.
+To bardziej „kontrastowa” interpolacja – zachowuje ostrość i przejścia.
+
+Jak wygląda:
+
+Nie jest tak rozmyty jak bilinear (c).
+
+Ma mocniejsze krawędzie i kontrast, bo bierze skrajne wartości.
+
+Kolory i granice są wyraźniejsze – coś pomiędzy nearest neighbor a bilinear, ale bardziej „wyostrzony”.
