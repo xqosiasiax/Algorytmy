@@ -1,5 +1,8 @@
-Wykonanie (ImageJ):
+1.Wykonanie (ImageJ):
 W programie ImageJ utworzono kwadratowy obraz o rozmiarze 256×256 pikseli, tło czarne (0), a na środku umieszczono pionowy biały pasek (255).
 Odpowiedź:
 Obraz zbudowany jest z fal płaskich o kierunku równoległym do osi X (poziomym). Fronty fal są pionowe, czyli równoległe do paska. W widmie Fouriera odpowiada temu pasmo wzdłuż osi poziomej (dla 
 ky=0
+
+2. W punkcie (b) wykonano transformatę Fouriera obrazu i dokonano aproksymacji widma przez dwie różne liczby składowych (r = 10 oraz r = 50). Następnie wykonano odwrotną transformację Fouriera i utworzono profile liniowe wzdłuż osi poziomej.
+Na rekonstrukcjach i profilach zaobserwowano oscylacje jasności przy krawędziach paska, które są przejawem efektu Gibbsa. Dla mniejszej liczby harmonicznych (r = 10) oscylacje są szerokie, a dla większej (r = 50) – węższe, ale ich amplituda pozostaje prawie taka sama. Zjawisko to jest wynikiem przybliżania nieciągłej funkcji skończonym szeregiem Fouriera.
