@@ -1,0 +1,5 @@
+Wykonanie (ImageJ):
+W programie ImageJ utworzono kwadratowy obraz o rozmiarze 256×256 pikseli, tło czarne (0), a na środku umieszczono pionowy biały pasek (255).
+Odpowiedź:
+Obraz zbudowany jest z fal płaskich o kierunku równoległym do osi X (poziomym). Fronty fal są pionowe, czyli równoległe do paska. W widmie Fouriera odpowiada temu pasmo wzdłuż osi poziomej (dla 
+ky=0

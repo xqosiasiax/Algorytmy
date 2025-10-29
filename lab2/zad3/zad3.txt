@@ -1,0 +1,21 @@
+🔹 tygrysA
+Wizualnie: najwyraźniejszy, mocne różnice między czernią i bielą (czyste plamy futra, wyraźne krawędzie).
+Wynik:
+Kontrast globalny: 53.81 — największe zróżnicowanie jasności.
+Kontrast lokalny: 4.88 — najwyższe lokalne różnice (krawędzie i tekstura).
+✅ Zgodne – obraz A ma najwyższy kontrast globalny i lokalny.
+
+🔹 tygrysB
+Wizualnie: trochę „łagodniejszy” niż A — futro i tło mają mniejsze różnice tonalne, ale obraz nadal ostry.
+Wynik:
+Kontrast globalny: 51.18 – nieco mniejszy niż A.
+Kontrast lokalny: 4.58 – także mniejszy.
+✅ Zgodne – różnica jest subtelna, ale widoczna: lekko obniżony kontrast w porównaniu z A.
+
+
+🔹 tygrysC
+Wizualnie: najbardziej „rozmyty”, bez mocnych czerni i bieli, miękkie przejścia tonalne.
+Wynik:
+Kontrast globalny: 36.34 – wyraźnie niższy.
+Kontrast lokalny: 3.31 – też najniższy.
+✅ Zgodne – obraz C jest wizualnie najmniej kontrastowy, więc wyniki są logiczne i poprawne.
