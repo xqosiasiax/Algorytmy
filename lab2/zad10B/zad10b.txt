@@ -4,3 +4,11 @@
 | B     | smużenie pionowe / rozmycie góra–dół   | ✔️ pionowe paski, pionowy smear       | ✅ poprawnie |
 | C     | smużenie poziome / rozmycie lewo–prawo | ✔️ poziome przemieszczenia            | ✅ poprawnie |
 | D     | mocne rozmycie, utrata detali          | ✔️ najgładszy z nich, detale zanikają | ✅ poprawnie |
+
+
+| Maska             | Co robi                      | Efekt               |
+| ----------------- | ---------------------------- | ------------------- |
+| A (małe koło)     | usuwa niskie częstotliwości  | zostają krawędzie   |
+| B (poziomy pasek) | usuwa poziome informacje     | obraz smuży pionowo |
+| C (pionowy pasek) | usuwa pionowe informacje     | obraz smuży poziomo |
+| D (duże koło)     | usuwa wysokie częstotliwości | rozmycie            |
