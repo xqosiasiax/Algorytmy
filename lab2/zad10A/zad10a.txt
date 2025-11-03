@@ -1,0 +1,12 @@
+Wspólne cechy obu widm:
+Jasny punkt centralny = składowa stała (DC, średnia jasność).
+Widoczny „krzyż” (pion/poziom) = wpływ krawędzi/ramki i słabych struktur nieokresowych w obu kierunkach.
+Drobne rozproszone składowe = detale (kołnierz, guziki, zagięcia tkaniny).
+>koszulaA (pasy pionowe):
+    Widmo ma dominujące pasmo poziome (symetryczne piki po lewej i prawej od centrum na osi x).
+    Interpretacja: obraz zmienia się w poziomie (częstotliwości wzdłuż osi x), bo pasy są pionowe.
+    Wzdłuż tego pasma widać harmoniczne (krotności częstotliwości okresu pasów).
+>koszulaB (pasy pod kątem):
+    Całe widmo jest obrócone o ten sam kąt co pasy; dominujące pasmo leży po przekątnej.
+    Odległość dominujących pików od centrum jest podobna jak w A (zbliżona gęstość pasów), różni się orientacja.
+    Energia jest nieco bardziej rozlana (więcej „skrzydeł”), co wynika z geometrii koszuli i lokalnych deformacji wzoru.

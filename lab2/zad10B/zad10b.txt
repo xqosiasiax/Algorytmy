@@ -1,0 +1,6 @@
+| Maska | Co powinno być                         | Twój wynik                            | Ocena       |
+| ----- | -------------------------------------- | ------------------------------------- | ----------- |
+| A     | krawędzie, silne kontury               | ✔️ wyraźne krawędzie                  | ✅ poprawnie |
+| B     | smużenie pionowe / rozmycie góra–dół   | ✔️ pionowe paski, pionowy smear       | ✅ poprawnie |
+| C     | smużenie poziome / rozmycie lewo–prawo | ✔️ poziome przemieszczenia            | ✅ poprawnie |
+| D     | mocne rozmycie, utrata detali          | ✔️ najgładszy z nich, detale zanikają | ✅ poprawnie |
