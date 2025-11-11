@@ -1,0 +1,22 @@
+Odpowiedzi do podpunktu (a)
+1️⃣ W których obszarach przy takiej częstotliwości (f = 1/50 px) rekonstrukcja sygnału nie jest możliwa?
+
+Rekonstrukcja sygnału nie jest możliwa w zewnętrznych obszarach płytki Fresnela, gdzie prążki są bardzo gęste (czyli dla r > ok. 300–350 px od środka).
+W tych obszarach częstotliwość zmian jasności przekracza połowę częstotliwości próbkowania (f > f_Nyquista = 1/100 px), przez co pojawia się aliasing.
+
+2️⃣ Dlaczego aliasing się pojawia? (krótko, wyjaśnienie)
+
+Częstotliwość próbkowania 1/50 px jest zbyt niska, by poprawnie odwzorować szybkie zmiany jasności na obrzeżach obrazu.
+W efekcie wysokie częstotliwości sygnału są „złożone” (aliasowane) do niższych, co powoduje zniekształcenia przebiegu — na wykresie objawia się to chaotycznymi punktami pomarańczowymi niezgodnymi z linią sygnału.
+
+3️⃣ Z jaką minimalną częstotliwością  należy próbkować obraz, by rekonstrukcja była możliwa?
+
+Na podstawie obserwacji przebiegu sygnału oszacowano, że najmniejszy okres zmian intensywności wynosi ok. 60 px.
+Zgodnie z twierdzeniem Nyquista, minimalna częstość próbkowania musi być co najmniej dwukrotnie większa: fmin = 1/30px
+czyli próbki powinny być pobierane co około 30 pikseli lub gęściej.
+
+W skrócie:
+Wnioski do podpunktu (a):
+Dla częstotliwości próbkowania f = 1/50 px poprawna rekonstrukcja sygnału jest możliwa jedynie w centralnej części obrazu (r < 300 px).
+W zewnętrznych partiach pojawia się aliasing spowodowany zbyt rzadkim próbkowaniem.
+Szacowana minimalna częstość próbkowania wynosi f_min = 1/30 px, co odpowiada odstępowi między próbkami równemu ok. 30 pikseli.

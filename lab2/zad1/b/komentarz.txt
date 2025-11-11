@@ -1,0 +1,10 @@
+Po zmniejszeniu obrazu do 30×30 pikseli każda próbka odpowiada dużemu fragmentowi oryginalnego obrazu. 
+Po ponownym powiększeniu bez interpolacji widać duże kwadratowe pola – to efekt digitalizacji, czyli ograniczenia obrazu do skończonej liczby próbek. 
+Oryginalne, płynne przejścia jasności zostały zastąpione blokami o stałym kolorze, dlatego szczegóły i drobne prążki zniknęły.
+
+Na zrekonstruowanym obrazie pojawiają się też aliasy, czyli fałszywe wzory, które nie występowały w oryginalnym obrazie. 
+Widać je głównie w zewnętrznych częściach płytki, gdzie prążki Fresnela były najgęstsze. 
+Powstają one dlatego, że częstotliwość próbkowania (30 punktów na krawędź) jest zbyt niska, aby poprawnie odwzorować szybkie zmiany jasności w tych obszarach.
+
+W centralnej części obrazu aliasów nie ma, ponieważ prążki są tam rzadsze i sygnał zmienia się wolniej, 
+więc nawet rzadkie próbkowanie wystarcza do jego odtworzenia.

@@ -1,0 +1,9 @@
+W tej części wykonano próbkowanie obrazu z częstotliwością fmin =1/30 px, 
+czyli co ok. 30 pikseli, zgodnie z oszacowaniem z części (a).
+Obraz został zmniejszony do 34×34 piksele (bez interpolacji), 
+a następnie powiększony ponownie do 1000×1000 pikseli.
+Rekonstrukcja przy tej częstotliwości jest prawidłowa — 
+aliasing został wyeliminowany, a struktura prążków Fresnela zachowana w całym obszarze.
+W porównaniu z rekonstrukcją 30×30 zauważalna jest jedynie nieznaczna różnica w jasności niektórych fragmentów, 
+co potwierdza osiągnięcie minimalnej częstotliwości próbkowania 𝑓min
+	
