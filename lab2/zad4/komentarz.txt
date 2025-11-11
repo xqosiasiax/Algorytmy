@@ -1,0 +1,24 @@
+💡 Interpretacja wyników
+
+MSE(JPEG vs PNG) = ~18.6
+
+MSE(GIF vs PNG) = ~74.0
+
+MSE (Mean Squared Error) mierzy średni błąd kwadratowy między pikselami dwóch obrazów — im mniejszy, tym obraz testowy bardziej zbliżony do oryginału (czyli lepsza jakość).
+
+JPEG ma mniejsze MSE, więc jest bliższy oryginałowi (PNG).
+
+GIF ma dużo większe MSE, co jest w pełni spodziewane, bo:
+
+GIF używa maks. 256 kolorów (paleta),
+
+przy konwersji z RGB (24-bit) do GIF-a powstają straty barw i dithering (widać ziarnistość),
+
+JPEG to format stratny, ale lepiej odwzorowuje kolory i przejścia tonalne niż GIF.
+
+📊 Logiczność liczb
+
+Wartości MSE rzędu 10–100 są całkowicie normalne dla obrazów RGB 8-bit (0–255).
+
+Różnica pomiędzy 18 a 74 dobrze odzwierciedla typowe zjawisko:
+GIF traci więcej jakości niż JPEG, choć oba są stratne.
