@@ -1,0 +1,14 @@
+1. fiststep -> Process -> enhance contrast i normalize 1%
+Co to robi: usuwa najciemniejsze i najjaśniejsze 1% pikseli z rozkładu wyjściowego i liniowo rozciąga pozostały zakres na pełne 0–255.
+Oczekiwany efekt w histogramie: poszerzony rozkład (większe wykorzystanie zakresu tonalnego).
+
+2.  secondstep -> Process -> enhance contrast i equalize histogram 
+Efekt: nieliniowa transformacja rozkładu intensywności (podnosi rzadkie poziomy, zmniejsza dominujące), może wydobyć szczegóły w bladych rejonach.
+Uwaga: equalizacja może też zwiększyć szum
+
+Wniosek:
+Metoda A (rozciągnięcie histogramu) daje bardziej naturalne zwiększenie kontrastu 
+i lepszą czytelność obrazu przy niższym poziomie szumu, dlatego jest metodą bardziej 
+odpowiednią dla tego typu fotografii niż equalizacja histogramu.
+
+
