@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 
 # Wczytaj obraz
-img = Image.open("stego.png").convert("L")
+img = Image.open("AlbertEinstein-modified.png").convert("L")
 arr = np.array(img)
 
 # który bit chcesz sprawdzić (0 = LSB)
