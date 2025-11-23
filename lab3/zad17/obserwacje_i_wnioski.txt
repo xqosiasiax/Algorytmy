@@ -1,0 +1,42 @@
+✅ (a) Zastosowanie okna sinusoidalnego
+Obserwacje:
+Na obrazie pojawiają się duże, ciemne i jasne obszary zgodne z maską sinusoidalną.
+Część obrazu jest mocno przyciemniona (plamy), część prawie niezmieniona.
+
+Wnioski:
+Maska sinusoidalna działa jak lokalny mnożnik jasności → tam gdzie sin=0, obraz ulega wyzerowaniu.
+Jest to nieliniowe zniekształcenie, które nie jest filtrowaniem, ale modulacją amplitudy.
+
+
+✅ (b) Wygładzenie filtem uśredniającym 3×3
+Obserwacje:
+Obraz jest tylko minimalnie wygładzony.
+Czarne plamy i jasne obszary pozostają prawie bez zmian.
+Histogram zmienia się tylko nieznacznie (mniejsze odchylenie standardowe).
+
+Wnioski:
+Maska 3×3 działa bardzo lokalnie → redukuje jedynie drobny szum.
+Nie jest w stanie zlikwidować dużych artefaktów po sinusoidzie, bo są znacznie większe niż 3×3.
+
+
+✅ (c) Korekcja gamma (γ ≈ 0.62)
+Obserwacje:
+Obraz staje się wyraźnie jaśniejszy.
+Mimo rozjaśnienia, ciemne plamy pozostają widoczne.
+Średnia jasność zbliża się do średniej obrazu oryginalnego.
+
+Wnioski:
+Gamma działa globalnie → podnosi jasność w całym obrazie, ale nie zmienia relacji lokalnych.
+Różnica tonalna po oknie sinusoidalnym nadal dominuje, ponieważ gamma nie usuwa przyciemeń, tylko je rozjaśnia.
+
+
+✅ (d) Uśrednianie bezpośrednio na oryginalnym obrazie
+Obserwacje:
+Obraz jest delikatnie wygładzony, szum wyraźnie mniejszy.
+Brak jakichkolwiek artefaktów czy plam.
+Histogram i jasność są bardzo zbliżone do oryginału.
+
+Wnioski:
+Uśrednianie 3×3 działa poprawnie tylko wtedy, gdy wejściowy sygnał nie jest zniekształcony funkcją sinus.
+Wynik z (d) jest „najbardziej naturalny”, bo filtr działał na nienaruszonym obrazie.
+Pokazuje to, że okno sinusoidalne z (a) wprowadza artefakty, których filtr 3×3 ani gamma nie potrafią naprawić.
