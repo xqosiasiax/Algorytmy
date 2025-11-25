@@ -33,7 +33,7 @@ while delta >= 2: #Delta mówi o ile zmienił się próg między iteracjami jest
     T1 = threshold_otsu(g1)
 
     T_new = (T0 + T1) / 2 
-    delta = abs(T_new - T) #óżnica między nowym progiem a starym progiem
+    delta = abs(T_new - T) #różnica między nowym progiem a starym progiem
     T = T_new
 
 
