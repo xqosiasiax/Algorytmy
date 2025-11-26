@@ -1,0 +1,25 @@
+7a) Skumulowany histogram
+
+Policzyłem zwykły histogram (pierwszy obrazek) i na jego podstawie zrobiłem histogram skumulowany – zielona krzywa rośnie monotonicznie od 0 do ok. 700 000.
+
+Ta krzywa mówi: „ile pikseli ma jasność ≤ g” – dokładnie to, co opisałem w komentarzu.
+
+Wykres wygląda poprawnie, więc komentarz z a) w pełni pasuje.
+
+7b) Wyrównanie histogramu
+
+Histogram po wyrównaniu (trzeci obrazek) wykorzystuje cały zakres 0–255, podczas gdy przed (pierwszy obrazek) zaczynał się dopiero od ~13 i kończył na 227.
+
+Wyrównanie nie robi idealnie płaskiego histogramu, ale widać, że słupki są „rozciągnięte” i bardziej równomierne – jest też większa odchylenie standardowe (48.8 → 69.8).
+
+Czyli możesz spokojnie mówić, że:
+
+„wyrównanie rozłożyło piksele szerzej po skali i zwiększyło globalny kontrast” – to dokładnie zgadza się z Twoim histogramem.
+
+7c) Hiperbolizacja (α = –1/3)
+
+Histogram po hiperbolizacji (ostatni wykres) ma mocniejsze piki w ciemnych zakresach i wyraźnie „ściśniętą” prawą część – jasne tony są zepchnięte w węższy przedział.
+
+To pasuje do opisu, że kontrast jest inaczej rozłożony niż po equalizacji: bardziej podkreślone są pewne zakresy (np. cienie), inne tracą rozdzielczość.
+
+Czyli zdanie „podkreśla inny fragment histogramu niż wyrównanie” jest jak najbardziej zgodne z Twoim wynikiem.

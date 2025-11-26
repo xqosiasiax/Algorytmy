@@ -1,0 +1,11 @@
+Na wejściu miałem obraz 8-bitowy w skali szarości (Rezydencja Diabła).
+
+Zamiast zmieniać same jasności, zwiększyłem kontrast poprzez kolor – każdej wartości szarości (0–255) przypisałem inny kolor RGB według podanego wykresu.
+
+Użyłem w ImageJ własnej mapy kolorów (LUT): ciemne piksele przechodzą w granat/czarny, średnie w czerwienie/brązy, a jasne w zielenie i turkus aż do prawie bieli.
+
+Funkcje dla kanałów R, G i B są odcinkami prostych (mapowanie liniowe w kilku zakresach: 0–64, 64–128, 128–192, 192–255), co odpowiada diagramowi z zadania.
+
+LUT wprowadziłem przez makro w ImageJ, które dla każdego poziomu jasności wylicza wartości R, G, B i ustawia je jako nową paletę.
+
+Efekt: struktura sceny jest czytelniejsza – różne zakresy jasności „rozjechały się” na różne kolory, więc małe różnice w szarości stały się dobrze widoczne kolorystycznie (większy kontrast wizualny).
