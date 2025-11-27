@@ -1,4 +1,3 @@
-// Zastosuj kolorowy LUT z zadania 9
 macro "Apply custom LUT" {
     n = 256;
     reds   = newArray(n);
@@ -15,7 +14,7 @@ macro "Apply custom LUT" {
         else
             b = (x-128)/(255-128)*255;       // 0 -> 255
 
-        // --- kanał RED (czerwony) ---
+        // --- kanał RED (czerw=ony) ---
         if (x <= 64)
             r = 0;
         else if (x <= 128)

@@ -3,7 +3,7 @@ import numpy as np
 
 # Pliki
 cover_path = "AlbertEinstein-modified.png"
-secret_path = "secret.png"
+secret_path = "secret.jpg"
 output_path = "stego.png"
 
 # Wczytaj obrazy

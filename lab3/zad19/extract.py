@@ -2,7 +2,8 @@ from PIL import Image
 import numpy as np
 
 # Wczytaj obraz
-img = Image.open("AlbertEinstein-modified.png").convert("L")
+img = Image.open("stego.png").convert("L")
+# Konwertuj na tablicę NumPy
 arr = np.array(img)
 
 # który bit chcesz sprawdzić (0 = LSB)
@@ -13,6 +14,8 @@ bitplane = ((arr >> bit) & 1) * 255
 
 # Zapisz wynik
 result = Image.fromarray(bitplane.astype(np.uint8))
+
+# Zapisz obraz
 result.save(f"extracted_bit_{bit}.png")
 
-print("✅ Zapisano obraz: extracted_bit_0.png")
+print(f"✅ Zapisano obraz: extracted_bit_{bit}.png")
