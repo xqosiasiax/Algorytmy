@@ -12,3 +12,7 @@ i lepszą czytelność obrazu przy niższym poziomie szumu, dlatego jest metodą
 odpowiednią dla tego typu fotografii niż equalizacja histogramu.
 
 
+
+
+a- Usuwam skrajne wartości (ekstrema), które często są szumem lub pojedynczymi błędnymi pikselami, a następnie rozciągam pozostałe wartości, żeby obraz lepiej wykorzystywał cały zakres jasności.
+b- Algorytm próbuje wyrównać histogram tak, aby wszystkie poziomy jasności występowały z podobną częstotliwością.

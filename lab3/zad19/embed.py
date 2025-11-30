@@ -1,12 +1,11 @@
 from PIL import Image
 import numpy as np
 
-# Pliki
+
 cover_path = "AlbertEinstein-modified.png"
 secret_path = "secret.png"
 output_path = "stego.png"
 
-# Wczytaj obrazy
 cover = Image.open(cover_path).convert("RGB")
 secret = Image.open(secret_path).convert("L")
 
@@ -20,12 +19,11 @@ binary_secret = (secret > 128).astype(np.uint8)
 # Obraz do tablicy numpy
 cover_array = np.array(cover)
 
-# Wpisanie secret do LSB wszystkich kanałów
-for channel in range(3):
+for channel in range(3): #usuwa ostatni bit i wstawia ostani bit jak w ukrytym
     cover_array[:, :, channel] = (cover_array[:, :, channel] // 2 * 2) + binary_secret
 
 
-# Zapisz stego-obraz
+
 stego = Image.fromarray(cover_array)
 stego.save(output_path)
 
