@@ -1,0 +1,26 @@
+Filtr Gaussa w ImageJ nie pozwala ręcznie zdefiniować rozmiaru maski.
+Przy σ=2 ImageJ automatycznie używa maski 13×13.
+W konsekwencji efekt jest znacznie silniejszy niż w filtrze 5×5 implementowanym w Pythonie.
+Do uzyskania filtra 5×5 zgodnego z treścią zadania konieczna jest implementacja własna (np. w Pythonie), ponieważ ImageJ narzuca większą maskę.
+
+✅ 1. Filtr uśredniający (Mean 5×5)
+
+Komentarz (krótki):
+
+Filtr uśredniający rozmywa obraz w sposób równomierny, ale agresywnie zaciera szczegóły. Krawędzie spadochronu stają się rozmyte, a drobne struktury zanikają. Szum jest redukowany wyraźnie, ale kosztem utraty ostrości.
+
+✅ 2. Filtr Gaussa (σ = 2, 5×5)
+
+Komentarz (krótki):
+
+Filtr Gaussa wygładza obraz bardziej naturalnie niż filtr uśredniający. Szum pozostaje stłumiony, ale krawędzie są zachowane lepiej. Rozmycie jest bardziej miękkie i wizualnie przyjemniejsze.
+
+✅ 3. Filtr średniej uciętej (k-trimmed-mean, 5×5, k=3)
+
+Komentarz (krótki):
+
+Filtr średniej uciętej skutecznie usuwa pojedyncze „odstające” piksele, redukując szum, ale jednocześnie zachowuje wyraźniejsze krawędzie niż filtr mean. Efekt jest kompromisem między zachowaniem szczegółów a wygładzeniem zakłóceń.
+
+🔥 4. Bardzo krótkie porównanie (1–2 zdania do sekcji podsumowania)
+
+Spośród trzech filtrów, filtr uśredniający daje najsilniejsze rozmycie i największą utratę szczegółów. Filtr Gaussa wygładza bardziej naturalnie, zachowując część krawędzi. Filtr średniej uciętej usuwa szum, ale najmniej niszczy struktury obrazu, stanowiąc kompromis między gładkością a zachowaniem detali.

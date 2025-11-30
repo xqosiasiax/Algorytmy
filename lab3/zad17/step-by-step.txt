@@ -1,0 +1,68 @@
+a) new -> image -> Typ: 32-bit -> kolor white 
+Process → Math → Macro -> v = sin(2*PI*x/w) * sin(2*PI*y/h);
+
+normalizacja:
+Process → Math → Multiply -> 0.5
+
+Process → Math → Add -> 0.5
+Maska ma teraz wartości od 0 do 1 (ciemne = 0, jasne = 1)
+
+Process → Image Calculator
+Image1: ptaki.png
+
+Operation: Multiply
+
+Image2: sinusoidalny obraz („Untitled”)
+Create new image
+
+---
+
+## (b) Filtrowanie uśredniające 3×3
+
+* Zaznacz wynik z (a) (obraz z plamami sinusoidalnymi).
+* **Process → Filters → Mean...**
+
+  * Radius: **1.0**
+
+→ obraz jest lekko wygładzony – to wynik **(b)**.
+(Dla testów używałeś chwilowo radius=8, ale w zadaniu radius=1.)
+
+---
+
+## (c) Korekcja gamma tak, żeby średnia jasność była zbliżona do oryginału
+
+### 1. Średnia jasność oryginału
+
+* Zaznacz `ptaki.png`
+* **Analyze → Histogram**
+* Odczytaj **Mean** → u Ciebie: **≈ 105.546**
+
+### 2. Średnia jasność obrazu z (b)
+
+* Zaznacz obraz po filtrze (b)
+* **Analyze → Histogram**
+* Mean ≈ **62.035**
+
+Na tej podstawie policzyliśmy γ ≈ **0.62** (przybliżenie logarytmiczne).
+Do szybkiego odtworzenia po prostu **używaj γ = 0.62**.
+
+### 3. Zastosowanie gamma
+
+* Zaznacz obraz z (b)
+
+* **Process → Math → Gamma…**
+
+  * Gamma: **0.62**
+  * OK
+
+---
+
+## (d) Uśrednianie bezpośrednio na oryginale
+
+* Zaznacz **oryginalny** `ptaki.png`
+* **Process → Filters → Mean…**
+
+  * Radius: **1.0**
+  * OK
+
+→ obraz lekko wygładzony, bez plam – wynik **(d)**.
