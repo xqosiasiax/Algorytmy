@@ -1,0 +1,12 @@
+1. Obraz po filtracji jest lekko rozmyty i wygładzony.
+Dzieje się tak, ponieważ większość współczynników w masce jest dodatnia i uśrednia wartości pikseli z sąsiedztwa, co redukuje nagłe zmiany jasności (szum i drobne detale).
+
+2. Krawędzie na obrazie są bardziej wyraźne i wyostrzone.
+Jest to efekt ujemnych wartości wokół środka oraz dodatniej wartości w centrum, które wzmacniają różnice między pikselem a jego sąsiadami (podbijanie kontrastu na granicach obiektów).
+
+3. Na obrazie widoczne są głównie kontury, zwłaszcza ukośne.
+Filtr wzmacnia różnice w określonym kierunku, przez co uwidacznia krawędzie nachylone pod kątem.
+
+4. Obraz po filtracji zawiera prawie wyłącznie linie i kontury obiektów.
+Wysokie wartości bezwzględne i układ maski tłumią jednolite obszary, a uwydatniają gwałtowne zmiany jasności (krawędzie).
+

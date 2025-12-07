@@ -1,0 +1,4 @@
+Wśród zastosowanych masek splotowych tylko jądro hₐ jest filtrem dolnoprzepustowym, ponieważ powoduje wygładzanie obrazu przez uśrednianie wartości pikseli z jego otoczenia. W rezultacie tłumione są wysokie częstotliwości obrazu, czyli szum oraz drobne detale.
+Pozostałe jądra, czyli hᵦ, hᶜ oraz hᵈ, są filtrami górnoprzepustowymi. Zawierają one wartości ujemne i wzmacniają różnice jasności pomiędzy sąsiednimi pikselami, przez co uwydatniają krawędzie i szczegóły obrazu.
+Filtr hᶜ uwypukla głównie krawędzie ukośne w kierunku północny-wschód – południowy-zachód (NE–SW) oraz w pewnym stopniu krawędzie poziome (wschód – zachód).
+Gradientowy filtr kierunkowy hᵈ wykrywa przede wszystkim krawędzie poziome (wschód – zachód), a także słabiej krawędzie ukośne (północny-zachód – południowy-wschód), reagując na zmiany jasności w kierunku pionowym.
