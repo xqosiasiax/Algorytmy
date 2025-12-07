@@ -1,0 +1,7 @@
+Find Edges automatycznie normalizuje obraz do 8-bit
+g-sum-with-bright jest w 32-bit, więc:
+wymagał ręcznego rozjaśnienia,
+
+Find edges
+może mieć mocniejszy kontrast.
+Ogólna struktura krawędzi jest taka sama

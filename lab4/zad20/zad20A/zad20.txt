@@ -1,0 +1,8 @@
+Na g1 widać:
+poziome krawędzie głów postaci,
+poziome segmenty spirali,
+pozioma linia u góry — to mocna zmiana jasności w pionie, więc filtr Sobela ją podkresla
+
+g2 filtr wykrywa zmiany w poziomie
+więc uwydatnia krawędzie pionowe,
+czyli powinny się pojawiać pionowe linie.
