@@ -1,0 +1,2 @@
+process -> filters -> convole 3x3 111
+process -> filters -> convole 0 1 -1

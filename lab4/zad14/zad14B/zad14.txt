@@ -1,0 +1,5 @@
+Process -> filters -> convolve -> 
+
+W punkcie (b) wyznaczono jądro filtru złożonego h₃ = h₁ ∗ h₂ i 
+zastosowano je bezpośrednio do obrazu g. Użyte jądro miało postać:
+Otrzymany obraz g₃ był praktycznie identyczny z obrazem g₂, co potwierdza łączność splotu.
