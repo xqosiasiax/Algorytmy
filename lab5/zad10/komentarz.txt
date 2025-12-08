@@ -1,0 +1,79 @@
+# **(a) Korelacja wzorca z obrazem – kanały RGB**
+
+**Kroki wykonane:**
+
+1. Wczytowanie obrazów
+   `File → Open` → obraz SMACS oraz wzorzec.
+
+2. Konwersja na RGB
+   `Image → Type → RGB Color`
+
+3. Rozdzielenie kanałów
+   `Image → Color → Split Channels`
+   → otrzymano 3 kanały obrazu i 3 kanały wzorca.
+
+4. Konwersja kanałów na 32-bit
+   `Image → Type → 32-bit` (dla każdego kanału).
+
+5. Eksport wzorca jako macierzy tekstowych
+   `File → Save As → Text Image…`
+   → zapisano: `kernel_R.txt`, `kernel_G.txt`, `kernel_B.txt`.
+
+6. Wykonanie korelacji (Convolve)
+   Dla każdego kanału:
+   `Process → Filters → Convolve…`
+   → `Open…` → odpowiedni kernel
+   → *Normalize Kernel* **odznaczone**
+   → wynik zapisano jako `corr_R`, `corr_G`, `corr_B`.
+
+**Oczekiwany wynik:**
+3 obrazy 32-bit przedstawiające wynik korelacji dla R, G i B (rozmyte, z jasnymi obszarami tam, gdzie wzorzec pasuje).
+
+---
+
+# **(b) Wyznaczenie miary korelacji RGB (mnożenie kanałów)**
+
+**Kroki wykonane:**
+
+1. Otworzenie `corr_R`, `corr_G`, `corr_B`
+   `Image → Type → 32-bit` (sprawdzenie zgodności).
+
+2. Mnożenie kanałów
+   `Process → Image Calculator…`
+
+   * `corr_R` * `corr_G` → wynik: `corr_RG`
+   * `corr_RG` * `corr_B` → wynik: `corr_RGB`
+     Zaznaczone: **Create new window**.
+
+3. Wyrównanie kontrastu (opcjonalnie)
+   `Image → Adjust → Brightness/Contrast → Auto`.
+
+**Oczekiwany wynik:**
+Jeden obraz 32-bit **corr_RGB** z wyraźnie widocznymi jasnymi obszarami odpowiadającymi wysokiej korelacji wzorca.
+
+---
+
+# **(c) Wyznaczenie 5 najbardziej prawdopodobnych pozycji wzorca**
+
+**Kroki wykonane:**
+
+1. Podkreślenie maksimów
+   `Process → Filters → Maximum…`
+   → `Radius = 2`.
+
+2. Detekcja maksimów
+   `Analyze → Find Maxima…`
+
+   * Prominence ustawione na ok. **10 000 000**,
+   * Output type: **Point Selection**,
+   * Preview włączone.
+     → otrzymano **4** stabilne maksima korelacji.
+
+3. Dodanie punktów do ROI
+   `t` lub `Add` w ROI Manager.
+
+4. Nałożenie na obraz oryginalny
+   `Show All` w ROI Manager.
+
+**Oczekiwany wynik:**
+4 (lub do 5) punktów oznaczających najbardziej prawdopodobne lokalizacje wzorca na obrazie SMACS; jeden z nich odpowiada poprawnemu dopasowaniu, pozostałe to silne obiekty o podobnej jasności.
