@@ -1,0 +1,16 @@
+Process → Filters → Convolve…
+
+Dla h₁:
+1
+-1
+0
+
+Dla h₂:
+0
+1
+-1
+
+Wyniki splotów dla obrazu 8-bitowego różnią się znacząco od wyników teoretycznych z części (a).
+W obrazie 8-bit wartości wynikowe są ograniczone do przedziału 0–255. Wartości ujemne są ucinane do 0 (czarny), a wartości dodatnie powyżej 255 do 255 (biały). Powoduje to utratę wszystkich pośrednich wartości i daje obraz czarno-biały.
+
+W obrazie 32-bitowym ImageJ przechowuje pełne wartości splotu (również ujemne i dodatnie), dzięki czemu wyniki oddają rzeczywiste działanie filtrów – pojawiają się zarówno szarości, jak i jasne oraz ciemne krawędzie. Wynik 32-bitowy jest zgodny z obliczeniami z części (a).
