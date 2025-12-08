@@ -1,0 +1,4 @@
+na pierwszej kopii Process → Filters → Minimum radius 1 
+na drugiej kopii Process → Filters → Maximum radius 1
+
+potem Process → Image Calculator operacja Add i Math -> Divide i 2

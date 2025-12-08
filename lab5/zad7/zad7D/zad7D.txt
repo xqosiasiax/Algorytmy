@@ -1,0 +1,24 @@
+run("Duplicate...", "title=kNN");
+width = getWidth();
+height = getHeight();
+
+for (y=1; y<height-1; y++) {
+    for (x=1; x<width-1; x++) {
+
+        values = newArray(9);
+        i = 0;
+
+        for (j=-1; j<=1; j++) {
+            for (k=-1; k<=1; k++) {
+                values[i] = getPixel(x+k, y+j);
+                i++;
+            }
+        }
+
+        Array.sort(values);
+        newValue = values[5];  // k = 6 (liczymy od 0)
+        setPixel(x, y, newValue);
+    }
+}
+
+print("Done - kNN filter 3x3, k=6 applied");
