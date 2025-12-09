@@ -1,0 +1,6 @@
+Dekonwolucja Van-Citterta stopniowo odwraca działanie filtru dolnoprzepustowego, dlatego wraz ze zwiększaniem liczby iteracji rośnie wzmocnienie wysokich częstotliwości (detali i szumu).
+Dla k = 2 obraz jest jedynie lekko wyostrzony, a zmiany względem wejścia są umiarkowane i widoczne głównie na konturach.
+Przy k = 5 wyostrzenie staje się dużo silniejsze – pojawiają się pierwsze artefakty oraz lokalne prześwietlenia, a różnica między rekonstrukcją a obrazem wejściowym zauważalnie rośnie.
+Dla k = 15 algorytm jest już niestabilny: wynik jest mocno przeostrzony i częściowo zniekształcony, a mapa różnicy jest prawie jednolicie jasna, co oznacza bardzo duże odchylenie od oryginału.
+
+Wyniki pokazują, że Van-Cittert działa poprawnie, ale wymaga ograniczonej liczby iteracji – zbyt duża prowadzi do wzmacniania szumu i przesterowania obrazu.
