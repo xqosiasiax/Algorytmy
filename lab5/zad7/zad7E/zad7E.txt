@@ -1,6 +1,6 @@
 
 run("Duplicate...", "title=SNN");
-run("8-bit"); // upewnij się, że obraz jest 8-bitowy
+run("8-bit"); 
 width = getWidth();
 height = getHeight();
 
@@ -18,13 +18,13 @@ for (y=1; y<height-1; y++) {
         g = getPixel(x,y+1);
         h = getPixel(x+1,y+1);
 
-        // wybór z par symetrycznych (if/else zamiast ?:)
+      
         if (abs(a-center) < abs(h-center)) p1 = a; else p1 = h;
         if (abs(b-center) < abs(g-center)) p2 = b; else p2 = g;
         if (abs(c-center) < abs(f-center)) p3 = c; else p3 = f;
         if (abs(d-center) < abs(e-center)) p4 = d; else p4 = e;
 
-        // średnia z 4 wybranych wartości (zaokrąglona)
+    
         newValue = (p1 + p2 + p3 + p4) / 4.0;
         newValue = round(newValue);
 
