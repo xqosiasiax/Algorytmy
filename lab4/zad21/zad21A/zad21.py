@@ -24,7 +24,7 @@ for k in kernels:
     responses.append(conv)
 
 
-edges = np.max(responses, axis=0)
+edges = np.max(responses, axis=0) # wybieramy maksymalną odpowiedź z wszystkich kierunków
 
 
 edges_norm = edges - edges.min()
