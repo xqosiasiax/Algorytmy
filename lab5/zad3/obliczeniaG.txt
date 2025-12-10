@@ -1,0 +1,17 @@
+c1 = 130050
+c2= 32768
+c3 = 65025
+c4 = 142500
+c5 = 127525
+c6 = 120000
+c7 = 102900
+c8 = 65825
+c9 = 38125
+
+Po uporządkowaniu:
+c2, c9, c3, c8, c7, c6, c5, c1, c4
+
+
+c2 = filtr minimalny
+c7 = filtr medianowy
+c4 = filtr maksymalny
